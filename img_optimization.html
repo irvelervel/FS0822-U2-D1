@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Optimization</title>
+    <style>
+      #image {
+        width: 400px;
+        height: 400px;
+        background: url(https://placekitten.com/400);
+      }
+
+      @media screen and (min-width: 1200px) {
+        #image {
+          width: 800px;
+          height: 800px;
+          background: url(https://placekitten.com/800);
+          /* questa immagine pesa più della precedente, ma NON verrà caricata
+          su dispositivi mobile perchè il suo schermo non rispetta le condizioni
+          della nostra media query */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image"></div>
+  </body>
+</html>
